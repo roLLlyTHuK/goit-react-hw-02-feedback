@@ -1,28 +1,15 @@
-import { List, ListItem, Text } from './Statistics.styled';
-const { Component } = require('react');
 
-export class Statistics extends Component {
-  render() {
-    const { good, neutral, bad, total, positivePercentage } = this.props;
 
-    return (
-      <List>
-        <ListItem>
-          <Text>Good: {good}</Text>
-        </ListItem>
-        <ListItem>
-          <Text>Neutral: {neutral}</Text>
-        </ListItem>
-        <ListItem>
-          <Text>Bad: {bad}</Text>
-        </ListItem>
-        <ListItem>
-          <Text>Total: {total}</Text>
-        </ListItem>
-        <ListItem>
-          <Text>Positive feedback: {positivePercentage}%</Text>
-        </ListItem>
-      </List>
-    );
-  }
-}
+export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+  return (
+    <div>
+      <p>Good: {good}</p>
+      <p>Neutral: {neutral}</p>
+      <p>Bad: {bad}</p>
+      <p>Total: {total}</p>
+      <p>Positive Feedback: {positivePercentage}%</p>
+    </div>
+  );
+};
+
+

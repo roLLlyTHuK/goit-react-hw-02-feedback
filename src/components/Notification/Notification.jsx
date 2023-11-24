@@ -1,5 +1,6 @@
-export const Notification = props => (
-  <>
-    <p>{props.message}</p>
-  </>
-);
+import { Paragraph } from "./Notification.styled";
+
+export const Notification = ({ message }) => {
+  return <Paragraph>{message}</Paragraph>;
+};
+
